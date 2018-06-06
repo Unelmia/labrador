@@ -30,6 +30,10 @@ h2{
     font-size: 30px;
 }
 
+h3{
+    font-size: 30px;
+    text-align: center;
+}
 
 p{
     font-size: 20px;
@@ -116,6 +120,8 @@ table.pagina2 {
     margin: 0 auto;
     font-family: Verdana, Geneva, sans-serif;
     font-size: 28px;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 td.pagina2 {
@@ -141,4 +147,10 @@ select {
 .winkelmandje {
     width: 40px;
     height: 40px;
+}
+
+input[type=number] {
+    width: 50px;
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 28px;
 }
