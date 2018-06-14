@@ -6,9 +6,10 @@
     <meta name="author" content="Erika Van Esbroeck" />
     <meta name="description" content="webshop" />
     <link href="cssEindwerk.css" rel="stylesheet" type="text/css" />
+    <script src="eindwerk.js" type="text/javascript"></script>
     <title>webshop</title>
 </head>
-<body>
+<body onload="kleur()">
     <header>
         <img src="Images/Olivia.JPG" />
         <h1>Webshop</h1>
@@ -28,10 +29,10 @@
                 <td class="pagina2">37€/stuk</td>
                 <td class="pagina2">
                     <form name="webshop">
-                        <input name="boek" type="number" value="0" size="5" min="0" />
+                        <input name="boek" type="number" value="0" size="5" min="0" id="boek"/>
                     </form>
                 </td>
-                <td class="pagina2"><input type="image" src="Images/Winkelmandje.png" alt="winkelmandje" class="winkelmandje" action="add to cart" /></td>
+                <td class="pagina2"><input type="image" src="Images/Winkelmandje.png" alt="winkelmandje" class="winkelmandje" onclick="winkelmandje1()" /></td>
             </tr>
             <tr>
                 <td class="pagina2"><img src="Images/knuffel.jpg" alt="knuffel" class="pagina2" /></td>
@@ -39,10 +40,10 @@
                 <td class="pagina2">25€/stuk</td>
                 <td class="pagina2">
                     <form name="webshop">
-                        <input name="knuffel" type="number" value="0" size="5" min="0" />
+                        <input name="knuffel" type="number" value="0" size="5" min="0" id="knuffel"/>
                     </form>
                 </td>
-                <td class="pagina2"><input type="image" src="Images/Winkelmandje.png" alt="winkelmandje" class="winkelmandje" action="add to cart" /></td>
+                <td class="pagina2"><input type="image" src="Images/Winkelmandje.png" alt="winkelmandje" class="winkelmandje" onclick="winkelmandje2()" /></td>
             </tr>
             <tr>
                 <td class="pagina2"><img src="Images/koffiemok.jpg" alt="koffiemok" class="pagina2" /></td>
@@ -50,19 +51,18 @@
                 <td class="pagina2">5€/stuk</td>
                 <td class="pagina2">
                     <form name="webshop">
-                        <input name="koffiemok" type="number" value="0" size="5" min="0" />
+                        <input name="koffiemok" type="number" value="0" size="5" min="0" id="koffiemok"/>
                     </form>
                 </td>
-                <td class="pagina2"><input type="image" src="Images/Winkelmandje.png" alt="winkelmandje" class="winkelmandje" action="add to cart" /></td>
+                <td class="pagina2"><input type="image" src="Images/Winkelmandje.png" alt="winkelmandje" class="winkelmandje" onclick="winkelmandje3()" /></td>
             </tr>
             <tr>
-                <td class="pagina2"><img src="Images/t-shirt blonde lab.jpg" alt="t-shirt blonde lab" class="pagina2" /></td>
-                <!-- of : <td class="pagina2"><img src="Images/t-shirt zwarte lab.jpg" alt="t-shirt zwarte lab" class="pagina2" /></td>-->
+                <td class="pagina2"><img id="foto" class="pagina2" /></td>
                 <td class="pagina2">Verkrijgbaar in verschillende maten van s tot xxl</td>
                 <td class="pagina2">19.99€/stuk</td>
                 <td class="pagina2">
                     <form name="webshop">
-                        <input name="t-shirt" type="number" value="0" size="5" min="0" />
+                        <input name="t-shirt" type="number" value="0" size="5" min="0" id="tshirt"/>
                     </form>
                     <Select name="maat">
                         <Option value="S">S
@@ -71,12 +71,12 @@
                         <Option value="XL">XL
                         <Option value="XXL">XXL
                     </Select>
-                    <select>
-                        <Option value="blond">Blond
-                        <Option value="zwart">Zwart
+                    <select onclick="kleur()" id="kleur">
+                        <Option id="kleur" value="blond">Blond
+                        <Option id="kleur" value="zwart">Zwart
                     </select>
                 </td>
-                <td class="pagina2"><input type="image" src="Images/Winkelmandje.png" alt="winkelmandje" class="winkelmandje" action="add to cart" /></td>
+                <td class="pagina2"><input type="image" src="Images/Winkelmandje.png" alt="winkelmandje" class="winkelmandje" onclick="winkelmandje4()" /></td>
             </tr>
             <tr>
                 <td class="pagina2"><img src="Images/kussen.jpg" alt="kussen" class="pagina2" /></td>
@@ -84,10 +84,10 @@
                 <td class="pagina2">18€/stuk</td>
                 <td class="pagina2">
                     <form name="webshop">
-                        <input name="kussen" type="number" value="0" size="5" min="0" />
+                        <input name="kussen" type="number" value="0" size="5" min="0" id="kussen"/>
                     </form>
                 </td>
-                <td class="pagina2"><input type="image" src="Images/Winkelmandje.png" alt="winkelmandje" class="winkelmandje" action="add to cart" /></td>
+                <td class="pagina2"><input type="image" src="Images/Winkelmandje.png" alt="winkelmandje" class="winkelmandje" onclick="winkelmandje5()" /></td>
             </tr>
             <tr>
                 <td class="pagina2"><img src="Images/waakbord.jpg" alt="waakbord" class="pagina2" /></td>
@@ -95,14 +95,14 @@
                 <td class="pagina2">12€/stuk</td>
                 <td class="pagina2">
                     <form name="webshop">
-                        <input name="waakbord" type="number" value="0" size="5" min="0" />
+                        <input name="waakbord" type="number" value="0" size="5" min="0" id="waakbordje"/>
                     </form>
                 </td>
-                <td class="pagina2"><input type="image" src="Images/Winkelmandje.png" alt="winkelmandje" class="winkelmandje" action="add to cart" /></td>
+                <td class="pagina2"><input type="image" src="Images/Winkelmandje.png" alt="winkelmandje" class="winkelmandje" onclick="winkelmandje6()" /></td>
             </tr>
         </table>
         <div class="btn-group">
-            <button class="button" onclick="window.location.href='Labrador.html'"><span>Homepagina</span></button>
+            <button class="button" onclick="window.location.href='index.html'"><span>Homepagina</span></button>
             <button class="button" onclick="window.location.href='bestellen.html'"><span>Bestellen</span></button>
         </div>
     </div>

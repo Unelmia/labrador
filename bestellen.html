@@ -6,6 +6,7 @@
     <meta name="author" content="Erika Van Esbroeck" />
     <meta name="description" content="webshop" />
     <link href="cssEindwerk.css" rel="stylesheet" type="text/css" />
+    <script src="eindwerk.js" type="text/javascript"></script>
     <title>Bestellen</title>
 </head>
 <body>
@@ -17,6 +18,9 @@
         <!--Hier komt de bestelling-->
         <h3>Facturatie adres</h3>
         <form>
+
+            <div id="resultaat"></div>
+
             <table class="pagina2">
                 <tr>
                     <td colspan="3">
@@ -50,8 +54,8 @@
         <form>
             <table class="pagina2">
                 <tr>
-                    <td colspan="3">
-                        <input type="radio" name="geslacht" value="m" />Meneer
+                    <td colspan="3">                     
+                        <input type="radio" name= "geslacht" value="m" />Meneer
                         <input type="radio" name="geslacht" value="v" />Mevrouw
                         <input type="radio" name="geslacht" value="j" />Mejufrouw
                     </td>
@@ -76,8 +80,12 @@
                     <td><input type="text" name="gemeente" size="50" /></td>
                 </tr>
             </table>
-            <button type="submit" class="button">Bestellen</button>
+
         </form>
+        <div class="btn-group">
+            <button class="button" onclick="window.location.href='index.html'"><span>Homepagina</span></button>
+            <button class="button" onclick="window.location.href='mailto:erikavanesbroeckhotmail.com'"><span>Bestellen</span></button>
+        </div>
     </div>
     <footer>
         <ul>
