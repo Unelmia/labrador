@@ -9,82 +9,95 @@
     <script src="eindwerk.js" type="text/javascript"></script>
     <title>Bestellen</title>
 </head>
-<body>
-    <header>
+<body onload="enableDisable()">
+    <header onload="winkelmandje()">
         <img src="Images/Silver-Labrador.jpg" />
         <h1>Uw bestelling</h1>
     </header>
     <div>
-        <!--Hier komt de bestelling-->
         <h3>Facturatie adres</h3>
         <form>
-
-            <div id="resultaat"></div>
-
             <table class="pagina2">
                 <tr>
                     <td colspan="3">
-                        <input type="radio" name="geslacht" value="m" />Meneer
-                        <input type="radio" name="geslacht" value="v" />Mevrouw
-                        <input type="radio" name="geslacht" value="j" />Mejufrouw
+                        <input type="radio" name="geslacht" value="m" id="0" />Meneer
+                        <input type="radio" name="geslacht" value="v" id="1" />Mevrouw
+                        <input type="radio" name="geslacht" value="j" id="2" />Mejufrouw
                     </td>
                     <td></td>
                 </tr>
                 <tr>
                     <td><label for="naam">Naam:</label></td>
-                    <td><input type="text" name="naam" size="50" /></td>
+                    <td><input type="text" name="naam" size="50" id="3" /></td>
                     <td><label for="voornaam">Voornaam:</label></td>
-                    <td><input type="text" name="voornaam" size="50" /></td>
+                    <td><input type="text" name="voornaam" size="50" id="4" /></td>
                 </tr>
                 <tr>
                     <td><label for="straat">Straat:</label></td>
-                    <td><input type="text" name="straat" size="50" /></td>
+                    <td><input type="text" name="straat" size="50" id="5" /></td>
                     <td><label for="nummer">Nummer:</label></td>
-                    <td><input type="text" name="huisnummer" /></td>
+                    <td><input type="text" name="huisnummer" id="6" /></td>
                 </tr>
                 <tr>
                     <td><label for="postcode">Postcode:</label></td>
-                    <td><input type="text" name="postcode" /></td>
+                    <td><input type="text" name="postcode" id="7" /></td>
                     <td><label for="gemeente">Gemeente:</label></td>
-                    <td><input type="text" name="gemeente" size="50" /></td>
+                    <td><input type="text" name="gemeente" size="50" id="8" /></td>
+                </tr>
+                <tr>
+                    <td><label for="telefoon">Telefoon:</label></td>
+                    <td><input type="text" name="telefoon" size="50" id="9" /></td>
+                    <td><label for="e-mail">e-mail:</label></td>
+                    <td><input type="text" name="e-mail" size="50" id="10" /></td>
                 </tr>
             </table>
         </form>
-        <h3>Leverings adres (indien verschillend van facturatie adres)</h3>
+        <h3>Leverings adres</h3>
         <form>
             <table class="pagina2">
                 <tr>
-                    <td colspan="3">                     
-                        <input type="radio" name= "geslacht" value="m" />Meneer
-                        <input type="radio" name="geslacht" value="v" />Mevrouw
-                        <input type="radio" name="geslacht" value="j" />Mejufrouw
+                    <td colspan="2">
+                        <input type="checkbox" checked name="levering" id="ja" onchange="enableDisable();" />Leveringsadres is hetzelfde als facturatieadres
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3">
+                        <input type="radio" name="geslacht" value="m" id="11" />Meneer
+                        <input type="radio" name="geslacht" value="v" id="12" />Mevrouw
+                        <input type="radio" name="geslacht" value="j" id="13" />Mejufrouw
                     </td>
                     <td></td>
                 </tr>
                 <tr>
-                    <td><label for="naam">Naam:</label></td>
-                    <td><input type="text" name="naam" size="50" /></td>
+                    <td><label for="naam" id="formulier">Naam:</label></td>
+                    <td><input type="text" name="naam" size="50" id="14" /></td>
                     <td><label for="voornaam">Voornaam:</label></td>
-                    <td><input type="text" name="voornaam" size="50" /></td>
+                    <td><input type="text" name="voornaam" size="50" id="15" /></td>
                 </tr>
                 <tr>
                     <td><label for="straat">Straat:</label></td>
-                    <td><input type="text" name="straat" size="50" /></td>
+                    <td><input type="text" name="straat" size="50" id="16" /></td>
                     <td><label for="nummer">Nummer:</label></td>
-                    <td><input type="text" name="huisnummer" /></td>
+                    <td><input type="text" name="huisnummer" id="17" /></td>
                 </tr>
                 <tr>
                     <td><label for="postcode">Postcode:</label></td>
-                    <td><input type="text" name="postcode" /></td>
+                    <td><input type="text" name="postcode" id="18" /></td>
                     <td><label for="gemeente">Gemeente:</label></td>
-                    <td><input type="text" name="gemeente" size="50" /></td>
+                    <td><input type="text" name="gemeente" size="50" id="19" /></td>
+                </tr>
+                <tr>
+                    <td><label for="telefoon">Telefoon:</label></td>
+                    <td><input type="text" name="telefoon" size="50" id="20" /></td>
+                    <td><label for="e-mail">e-mail:</label></td>
+                    <td><input type="text" name="e-mail" size="50" id="21" /></td>
                 </tr>
             </table>
 
         </form>
         <div class="btn-group">
-            <button class="button" onclick="window.location.href='index.html'"><span>Homepagina</span></button>
-            <button class="button" onclick="window.location.href='mailto:erikavanesbroeckhotmail.com'"><span>Bestellen</span></button>
+            <button class="button" onclick="window.location.href='webshop.html'"><span>Webshop</span></button>
+            <button class="button" onclick="bestellen()"><span>Bestellen</span></button>
         </div>
     </div>
     <footer>
